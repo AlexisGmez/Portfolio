@@ -1,0 +1,475 @@
+:root {
+  --bg-header: #fef2f2;
+  --color-icons: #f26440;
+  --color-principal: #286f6c;
+  --fs-titulo: 50px;
+  --fs-subtitulos: 2rem;
+  --fs-subsection:20px;
+  --fs-titulo-desktop: 80px;
+  --fs-subtitulos-desktop: 40px;
+  --fs-subsection-desktop:20px;
+  --sections-space: 8rem;
+  --navbar-height: 4rem;
+  font-family: arial;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h2 {
+  font-size: var(--fs-subtitulos);
+}
+
+p {
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.header__container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: var(--bg-header);
+  margin-bottom: var(--sections-space);
+  overflow: hidden;
+}
+.header__container .navbar {
+  display: flex;
+  justify-content: end;
+  padding: 1rem 2rem;
+  height: var(--navbar-height);
+}
+.header__container .navbar .nav__content {
+  position: absolute;
+  left: 0;
+  z-index: 5000;
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF8EA;
+  transform: translate(-100%);
+  transition: transform 0.5s;
+}
+.header__container .navbar .nav__content ul {
+  width: 100%;
+}
+.header__container .navbar .nav__content ul li a {
+  padding: 1.4rem;
+  width: 100%;
+  color: #666060;
+}
+.header__container .navbar .nav__content ul li a:hover {
+  background: #c5c0b5;
+  cursor: pointer;
+}
+.header__container .navbar .nav__content ul li .active {
+  background: blue;
+}
+.header__container .navbar .nav__content--active {
+  transform: translate(0);
+}
+.header__container .navbar .navbar__icon {
+  transition: transform 0.5s;
+}
+.header__container .navbar .navbar__icon .bx {
+  font-size: 2rem;
+}
+.header__container .navbar .navbar__icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.header__container .header__principal {
+  max-width: 600px;
+  min-width: 375px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.header__container .header__principal > div {
+  margin: 1.5rem 0;
+}
+.header__container .header__principal .header__content {
+  width: 100%;
+}
+.header__container .header__principal .header__content .title__container .header__title {
+  font-size: var(--fs-titulo);
+  font-weight: bold;
+  text-align: center;
+}
+.header__container .header__principal .header__content .icons__container {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0 3rem 0;
+}
+.header__container .header__principal .header__content .icons__container a {
+  font-size: 3rem;
+  background: var(--color-icons);
+  color: #fff;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 0.5rem;
+  border: 3px solid #fff;
+  user-select: none;
+}
+.header__container .header__principal .header__content .icons__container a:hover {
+  cursor: pointer;
+  background: orange;
+}
+.header__container .header__principal .header__image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  border-radius: 10%;
+}
+.header__container .header__principal .header__image img {
+  position: relative;
+  z-index: 2000;
+  user-select: none;
+}
+.header__container .header__principal .header__image .header__image--burble {
+  position: absolute;
+  top: -1rem;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: var(--color-principal);
+}
+
+.main {
+  max-width: 450px;
+  margin: auto;
+}
+.main #aboutMe {
+  padding: 0 1rem;
+}
+.main #aboutMe h2 {
+  color: var(--color-principal);
+  margin-bottom: 2rem;
+  font-size: var(--fs-subtitulos);
+}
+.main #mySkills {
+  position: relative;
+  padding: 4rem 0;
+}
+.main #mySkills h2 {
+  position: relative;
+  z-index: 3000;
+  color: #fff;
+  font-size: var(--fs-subtitulos);
+  margin-left: 1rem;
+}
+.main #mySkills .skills__article {
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.main #mySkills .skills__article .skill {
+  position: relative;
+  z-index: 3000;
+  background: #ddd4d4;
+  padding: 0.5rem;
+  transition: transform 0.5s;
+  flex: 1 1;
+}
+.main #mySkills .skills__article .skill h3 {
+  font-size: var(--fs-subsection);
+  margin-bottom: 1rem;
+}
+.main #mySkills .skills__article .skill p {
+  color: rgb(113, 102, 102);
+}
+.main #mySkills .skills__article .skill:hover {
+  transform: scale(1.1);
+}
+.main #mySkills .burbleOne {
+  width: 320px;
+  height: 320px;
+  position: absolute;
+  top: 5%;
+  left: -3rem;
+  border-radius: 50%;
+  background: var(--color-principal);
+}
+.main #mySkills .burbleTwo {
+  position: absolute;
+  top: 5%;
+  left: -3rem;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: red;
+}
+.main #experience {
+  padding: 0 1rem;
+  margin-bottom: var(--sections-space);
+}
+.main #experience h2 {
+  color: var(--color-principal);
+  font-size: var(--fs-subtitulos);
+  margin-bottom: 2rem;
+}
+.main #experience .experience__container .item__experience {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+  transition: trasform 0.5s;
+}
+.main #experience .experience__container .item__experience div .bx {
+  font-size: 5rem;
+  color: var(--color-icons);
+}
+.main #experience .experience__container .item__experience:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.main #portfolio {
+  padding: 0 1rem;
+  background: var(--color-principal);
+  height: 100vh;
+  margin-bottom: 16rem;
+}
+.main #portfolio .portfolio__image {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: transform 0.5s;
+}
+.main #portfolio .portfolio__image p {
+  font-weight: bold;
+}
+.main #portfolio .portfolio__image:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.main #portfolio .portfolio__image--first {
+  box-shadow: 0 -1rem 2rem rgba(0, 0, 0, 0.175);
+  position: relative;
+  top: -4rem;
+}
+.main #portfolio .portfolio__text h3 {
+  font-size: var(--fs-subtitulos);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.main #portfolio .portfolio__text p {
+  color: #fff;
+}
+.main #portfolio .portfolio__image--second {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  position: relative;
+  bottom: -4rem;
+}
+.main #contact {
+  position: relative;
+}
+.main #contact h1 {
+  margin-left: 1rem;
+  font-size: var(--fs-titulo);
+  position: relative;
+  z-index: 2000;
+}
+.main #contact .contact__icons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 0;
+  z-index: 2000;
+}
+.main #contact .contact__icons article div .bx {
+  font-size: 3rem;
+  background-color: var(--color-icons);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+.main #contact .contact__icons article p:nth-child(2) {
+  font-weight: bold;
+}
+.main #contact .contact__icons article p:nth-child(3) {
+  color: rgb(156, 148, 148);
+}
+.main #contact .contact__icons article i:hover {
+  cursor: pointer;
+  background: orange;
+}
+.main #contact .burble__contact {
+  position: absolute;
+  top: 2rem;
+  left: -5rem;
+  width: 200px;
+  height: 200px;
+  background: #ccc;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+  .header__container {
+    position: relative;
+  }
+  .header__container .navbar {
+    padding: 2rem 0;
+    position: sticky;
+    top: 0;
+  }
+  .header__container .navbar .nav__content {
+    transform: translate(0);
+    width: 100%;
+    height: 0;
+    justify-content: end;
+  }
+  .header__container .navbar .nav__content ul {
+    display: flex;
+    justify-content: end;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .header__container .navbar .nav__content ul li a {
+    width: auto;
+  }
+  .header__container .navbar .nav__content ul li a:hover {
+    color: #bd8d8d;
+    cursor: pointer;
+    background: none;
+  }
+  .header__container .navbar .navbar__icon .bx-menu {
+    display: none;
+  }
+  .header__container .header__principal {
+    max-width: 1250px;
+    display: flex;
+    flex-direction: row;
+  }
+  .header__container .header__principal .header__content {
+    margin: auto;
+    max-width: 500px;
+  }
+  .header__container .header__principal .header__content .title__container .header__title {
+    font-size: var(--fs-titulo-desktop);
+  }
+  .header__container .header__principal .header__content .icons__container a {
+    width: 6rem;
+    height: 6rem;
+    font-size: 3.5rem;
+  }
+  .header__container .header__principal .header__image img {
+    width: 70%;
+    border-radius: 10%;
+  }
+  .header__container .header__principal .header__image .header__image--burble {
+    width: 90%;
+    height: 120%;
+  }
+  .main {
+    max-width: 1250px;
+  }
+  .main #aboutMe {
+    padding: 0 5rem;
+  }
+  .main #aboutMe h2 {
+    font-size: var(--fs-subtitulos-desktop);
+  }
+  .main #mySkills .skills__article {
+    display: flex;
+    justify-content: center;
+  }
+  .main #mySkills .skills__article .skill {
+    max-width: 220px;
+  }
+  .main #mySkills .burbleOne {
+    width: 500px;
+    height: 500px;
+  }
+  .main #mySkills .burbleTwo {
+    width: 200px;
+    height: 200px;
+  }
+  .main #experience {
+    margin: 16rem 0;
+    padding: 0;
+  }
+  .main #experience .experience__container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+  .main #experience .experience__container .item__experience {
+    gap: 1rem;
+  }
+  .main #portfolio {
+    display: flex;
+    height: 80vh;
+    gap: 2rem;
+    position: relative;
+  }
+  .main #portfolio .portfolio__image {
+    max-height: 420px;
+    max-width: 400px;
+  }
+  .main #portfolio .portfolio__text {
+    max-width: 500px;
+    margin: auto;
+  }
+  .main #portfolio .portfolio__image--first {
+    position: absolute;
+    left: 2rem;
+    top: -8rem;
+  }
+  .main #portfolio .portfolio__image--second {
+    position: absolute;
+    right: 2rem;
+    bottom: -8rem;
+  }
+  .main #contact {
+    height: 50vh;
+  }
+  .main #contact h1 {
+    margin-left: 16rem;
+    font-size: var(--fs-titulo-desktop);
+  }
+  .main #contact .contact__icons {
+    gap: 8rem;
+  }
+  .main #contact .contact__icons article div .bx {
+    font-size: 8rem;
+  }
+  .main #contact .burble__contact {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
