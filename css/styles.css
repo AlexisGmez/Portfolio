@@ -58,6 +58,7 @@ img {
   justify-content: end;
   padding: 1rem 2rem;
   height: var(--navbar-height);
+  width: 100%;
 }
 .header__container .navbar .nav__content {
   position: absolute;
@@ -342,8 +343,10 @@ img {
   }
   .header__container .navbar {
     padding: 2rem 0;
-    position: sticky;
+    position: fixed;
     top: 0;
+    z-index: 5000;
+    background: var(--bg-header);
   }
   .header__container .navbar .nav__content {
     transform: translate(0);
@@ -365,6 +368,9 @@ img {
     cursor: pointer;
     background: none;
   }
+  .header__container .navbar .nav__content ul li .activo {
+    font-weight: 700;
+  }
   .header__container .navbar .navbar__icon .bx-menu {
     display: none;
   }
@@ -372,6 +378,7 @@ img {
     max-width: 1250px;
     display: flex;
     flex-direction: row;
+    margin-top: 4rem;
   }
   .header__container .header__principal .header__content {
     margin: auto;

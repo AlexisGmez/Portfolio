@@ -53,7 +53,7 @@ img{
         justify-content: end;
         padding: 1rem 2rem;
         height: var(--navbar-height);
-        
+        width: 100%;
         .nav__content{
             position: absolute;
             left: 0;
@@ -401,8 +401,11 @@ img{
         position: relative;
         .navbar{
             padding: 2rem 0 ;
-            position: sticky;
+            position: fixed;
             top: 0;
+            z-index: 5000;
+            background: var(--bg-header);
+            
             .nav__content{  
                 transform: translate(0);
                 width: 100%;
@@ -428,6 +431,10 @@ img{
                                 
                             }
                         }
+                        .activo{
+                            
+                            font-weight: 700;
+                        }
                     }
                     
                 }
@@ -443,7 +450,7 @@ img{
             max-width: 1250px;
             display: flex;
             flex-direction: row;
-              
+            margin-top: 4rem;
             .header__content{
                 margin: auto;
                 max-width: 500px;
