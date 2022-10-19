@@ -191,6 +191,8 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  cursor: pointer;
+  user-select: none;
 }
 .main #mySkills .skills__article .skill {
   position: relative;
@@ -444,7 +446,7 @@ img {
   }
   .main #portfolio .portfolio__image {
     max-height: 420px;
-    max-width: 400px;
+    max-width: 590px;
   }
   .main #portfolio .portfolio__text {
     max-width: 500px;
