@@ -440,13 +440,12 @@ img {
   }
   .main #portfolio {
     display: flex;
-    height: 80vh;
-    gap: 2rem;
+    height: 100vh;
     position: relative;
   }
   .main #portfolio .portfolio__image {
     max-height: 420px;
-    max-width: 590px;
+    max-width: 500px;
   }
   .main #portfolio .portfolio__text {
     max-width: 500px;
@@ -460,7 +459,7 @@ img {
   .main #portfolio .portfolio__image--second {
     position: absolute;
     right: 2rem;
-    bottom: -8rem;
+    bottom: -9rem;
   }
   .main #contact {
     height: 50vh;
