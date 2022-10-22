@@ -339,6 +339,13 @@ img {
   background: #ccc;
   border-radius: 50%;
 }
+.main #footer {
+  padding: 2rem;
+}
+.main #footer p {
+  text-align: center;
+  color: rgb(137, 124, 124);
+}
 
 @media screen and (min-width: 768px) {
   body {
@@ -375,7 +382,7 @@ img {
     cursor: pointer;
     background: none;
   }
-  .header__container .navbar .navbar__icon .bx-menu {
+  .header__container .navbar .navbar__icon {
     display: none;
   }
   .header__container .header__principal {

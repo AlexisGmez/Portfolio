@@ -392,17 +392,23 @@ img{
 
         
     }
+    #footer{
+        padding: 2rem;
+        
+        p{
+            text-align: center;
+            color: rgb(137, 124, 124);
+        }
+    }
 
 }
 
 
 @media screen and (min-width: 768px) {
 
-
     body{
         font-size: 18px;
-    }
-    
+    }    
     .header__container{
         position: relative;
         .navbar{
@@ -443,11 +449,10 @@ img{
                     
                 }
             }
+
             .navbar__icon{
-                .bx-menu{
-                    display: none;
-                }
                 
+                display: none;
             }
         }
         .header__principal{
@@ -584,5 +589,6 @@ img{
                 
             }
         }
+        
     }
 }

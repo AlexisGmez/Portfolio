@@ -47,12 +47,6 @@ const verifyVisivility =(entries)=>{
     }
 }
 
-
-
-
-
-
-
 const observer = new IntersectionObserver(verifyVisivility);
 main.forEach((item,id)=>{
     if (main[id].id) observer.observe(main[id]);
