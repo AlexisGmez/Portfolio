@@ -38,6 +38,8 @@ const verifyVisivility =(entries)=>{
                 
                 item.getAttribute('href').slice(1).includes(entry.target.id) ? item.classList.add("activo") : item.classList.remove("activo");
                 let coord = document.querySelector(".header__container").getBoundingClientRect();
+
+                console.log(entry.target)
                 
                
             });
