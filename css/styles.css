@@ -89,6 +89,9 @@ img {
 .header__container .navbar .nav__content ul li .active {
   background: blue;
 }
+.header__container .navbar .nav__content ul .activo {
+  font-weight: 700;
+}
 .header__container .navbar .nav__content--active {
   transform: translate(0);
 }
@@ -371,9 +374,6 @@ img {
     color: #bd8d8d;
     cursor: pointer;
     background: none;
-  }
-  .header__container .navbar .nav__content ul li .activo {
-    font-weight: 700;
   }
   .header__container .navbar .navbar__icon .bx-menu {
     display: none;
